@@ -20,6 +20,7 @@ pipeline {
                 script {
                     echo "Building..."
                     sh 'printenv'
+                    sleep 10
                 }
             }
         }
