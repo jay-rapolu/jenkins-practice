@@ -18,8 +18,8 @@ pipeline {
             steps {
                 script {
                     echo "Building..."
-                    env
                 }
+                sh env
             }
         }
         stage('Test') {
