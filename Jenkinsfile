@@ -1,6 +1,8 @@
 pipeline {
     agent {
-        label 'roboshop-agent'
+        node {
+            label 'roboshop-agent'
+        }
     }
 
     options {
@@ -29,6 +31,16 @@ pipeline {
                     echo "Deploying..."
                 }
             }
+        }
+    }
+
+    post {
+        always {
+            echo "I will always say hello"
+        }
+
+        success {
+            echo "I will say hello when the pipeline is success."
         }
     }
 
