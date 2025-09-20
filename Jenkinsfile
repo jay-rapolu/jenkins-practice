@@ -1,0 +1,30 @@
+pipeline {
+    agent {
+        label 'roboshop-agent'
+    }
+
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    echo "Building..."
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                script {
+                    echo "Testing..."
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                script {
+                    echo "Deploying..."
+                }
+            }
+        }
+    }
+    
+}
