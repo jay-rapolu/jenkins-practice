@@ -30,6 +30,7 @@ pipeline {
                 script {
                     echo "Deploying..."
                 }
+                deleteDir()
             }
         }
     }
