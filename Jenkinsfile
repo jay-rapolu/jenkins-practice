@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     echo "Building..."
-                    printenv
+                    sh printenv
                 }
             }
         }
