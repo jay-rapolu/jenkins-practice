@@ -34,6 +34,10 @@ pipeline {
             }
         }
         stage('Test') {
+            input {
+                message "should we continue to testing?"
+                ok "yes, we should"
+            }
             steps {
                 script {
                     echo "Testing..."
