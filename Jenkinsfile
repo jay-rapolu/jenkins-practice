@@ -29,7 +29,6 @@ pipeline {
                     echo "Building..."
                     sh 'printenv'
                     sleep 10
-                    echo "hello ${params.PERSON}" 
                 }
             }
         }
