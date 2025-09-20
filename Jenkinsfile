@@ -3,11 +3,16 @@ pipeline {
         label 'roboshop-agent'
     }
 
+    options {
+        timeout(time: 1, unit: 'SECONDS')
+    }
+
     stages {
         stage('Build') {
             steps {
                 script {
                     echo "Building..."
+                    sleep 2
                 }
             }
         }
@@ -26,5 +31,5 @@ pipeline {
             }
         }
     }
-    
+
 }
